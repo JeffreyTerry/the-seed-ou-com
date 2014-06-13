@@ -98,9 +98,25 @@
   src: url('../fonts/prime/Prime Light.otf');
 }
 
+@font-face {
+  font-family: eagle;
+  src: url('../fonts/eagle/eagle-book.otf');
+}
 
+@font-face {
+  font-family: eagle-bold;
+  src: url('../fonts/eagle/eagle-bold.ttf');
+}
 
+@font-face {
+  font-family: sintony;
+  src: url('../fonts/sintony/Sintony-Regular.otf');
+}
 
+@font-face {
+  font-family: sintony-bold;
+  src: url('../fonts/sintony/Sintony-Bold.otf');
+}
 
 
 
