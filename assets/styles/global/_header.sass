@@ -1,0 +1,58 @@
+$header-height: 80px
+$navigation-item-padding: 18px
+
+.header-wrapper
+  width: 100%
+  height: $header-height
+  background-color: #841617
+
+@media (max-width: $container-width)
+  .header-wrapper
+    width: $container-width
+
+.header-box
+  width: $container-width
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  .logo-box
+    cursor: pointer
+    font-size: 40px
+    color: white
+    margin-left: auto
+    margin-right: auto
+    padding-top: 6px
+    font-weight: bold
+    .title
+      margin: 0
+      font-family: eagle
+      .cream-text
+        color: #FDF9D8
+      .crimson-text
+        color: #FDF9D8
+    .sub-title
+      font-family: disco
+      font-size: 20px
+      color: #FDF9D8
+  .navigation-box
+    position: absolute
+    left: 200px
+    top: $navigation-item-padding
+    .navigation-item
+      height: $header-height - $navigation-item-padding * 2
+      line-height: $header-height - $navigation-item-padding * 2
+      float: left
+      margin-left: 50px
+      padding: 0 20px
+      font-size: 20px
+      font-family: sintony-bold
+      color: #FDF9D8
+      cursor: pointer
+      &:hover
+        background-color: #660000
+
+
+
+
+
+

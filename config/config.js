@@ -8,7 +8,7 @@ var config = {
   development: {
     root: rootPath,
     app: {
-      name: 'EduCode'
+      name: 'TheSeed'
     },
     port: 3000,
     db: 'mongodb://localhost/EduCode-development'
@@ -17,7 +17,7 @@ var config = {
   test: {
     root: rootPath,
     app: {
-      name: 'EduCode'
+      name: 'TheSeed'
     },
     port: 3000,
     db: 'mongodb://localhost/EduCode-test'
@@ -26,7 +26,7 @@ var config = {
   production: {
     root: rootPath,
     app: {
-      name: 'EduCode'
+      name: 'TheSeed'
     },
     port: 3000,
     cred: {
@@ -37,7 +37,7 @@ var config = {
         ca: fs.readFileSync('/ssl/ca/ca.crt')
         */
     },
-    db: 'mongodb://localhost/EduCode-production'
+    db: 'mongodb://localhost/TheSeed-production'
   }
 };
 
