@@ -1,0 +1,106 @@
+// wonderful blue (68, 133, 245)
+@import ../global
+
+.top-wrapper
+  width: 100%
+
+@media (max-width: $container-width)
+  .top-wrapper
+    width: $container-width
+  .top
+    width: $container-width
+
+.top
+  background: rgb(39, 40, 34) 50% 0px no-repeat fixed
+  text-align: center
+  width: 100%
+  height: 581px
+
+.top-text
+  font-size: 120px
+  color: white
+  margin-left: auto
+  margin-right: auto
+  padding-top: 112px
+  font-weight: bold
+  .title
+    font-family: envycoder
+    .white-text
+      color: white
+    .blue-text
+      color: rgb(68, 133, 245)
+  .sub-title
+    font-family: disco
+    font-size: 60px
+    color: rgb(143, 144, 138)
+
+@media (max-width: $container-width)
+  .top-text
+    .sub-title
+      font-size: 60px
+      font-family: comfortaa
+
+.middle-section
+  width: $container-width
+  margin-left: auto
+  margin-right: auto
+  .title
+    cursor: default
+    +unselectable()
+    font-size: 80px
+    text-align: center
+    font-family: comfortaa-bold
+  .title.first-title
+    color: #30FEAB
+  .title.second-title
+    color: #FF6E30
+  .title.third-title
+    color: #FFB630
+  .title.fourth-title
+    color: rgb(68, 133, 245)
+  .subtitle
+    cursor: default
+    +unselectable()
+    font-size: 36px
+    text-align: left
+    font-family: opensans-light
+    color: gray
+  .text-content
+    font-size: 16px
+    font-family: opensans
+
+.content-wrapper
+  width: 100%
+  padding: 20px 0
+
+@media (max-width: $container-width)
+  .content-wrapper
+    width: $container-width
+
+.content-wrapper:nth-child(odd)
+  background-color: #e0eee0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
