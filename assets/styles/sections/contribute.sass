@@ -1,0 +1,76 @@
+// wonderful blue (68, 133, 245)
+@import ../global
+
+.main-column
+  margin-bottom: 30px
+
+.content-wrapper
+  .title
+    cursor: default
+    +unselectable()
+    font-size: 60px
+    text-align: center
+    font-family: nunito
+    padding-bottom: 20px
+  .text-content
+    font-size: 18px
+    font-family: opensans
+  .left-column
+    @extend .main-column
+    float: left
+    width: ($container-width - $column-padding) / 2
+  .right-column
+    @extend .main-column
+    float: right
+    width: ($container-width - $column-padding) / 2
+
+.input-box
+  margin: 30px 0
+  a[href='application']
+    text-decoration: none
+
+.share-input
+  @extend .seed-input
+  +placeholder-text-color(#841617)
+  width: ($container-width - $column-padding) / 2 - 137px
+
+.share-button
+  @extend .seed-button
+  margin-left: 20px
+
+.apply-button
+  @extend .seed-button
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+#suggestion-modal
+  margin-top: 200px
+  font-size: 36px
+  text-align: center
+  color: #254467
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

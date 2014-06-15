@@ -1,0 +1,39 @@
+extends ../layout
+
+block css
+  link(rel='stylesheet', href='/styles/sections/application.css')
+
+block content
+  .content-wrapper
+    .content
+      .title Apply for The Seed
+      .left-column
+        .input-box-description Name
+        .input-box-description OU Email
+        .input-box-description 5 Sample Headlines
+        .input-box-description Sample Article
+      .right-column
+        .input-box
+          input.application-input#name-input(type='text', placeholder='name')
+        .input-box
+          input.application-input#email-input(type='text', placeholder='email')
+        .input-box
+          input.application-input#sample-headlines-input(type='text', placeholder='sample headlines')
+        .input-box
+          textarea.application-input#sample-article-input(placeholder='sample article', rows=15)
+        .input-box
+          button.application-button(onclick='sendApplication()') apply
+
+  //- Application modal
+  .modal.fade#application-modal(tabindex='-1', role='dialog', aria-labelledby='application-modal-label', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          i.fa.fa-spinner.fa-spin#application-spinner
+          span.modal-title#application-modal-label &nbsp;&nbsp;Processing Application
+
+block js
+  script(type='text/javascript', src='/js/sections/application.js')
+
+
+

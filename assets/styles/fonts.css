@@ -118,6 +118,14 @@
   src: url('../fonts/sintony/Sintony-Bold.otf');
 }
 
+@font-face {
+  font-family: fredokaone;
+  src: url('../fonts/fredoka_one/FredokaOne-Regular.ttf');
+}
 
+@font-face {
+  font-family: nunito;
+  src: url('../fonts/nunito/Nunito-Regular.ttf');
+}
 
 

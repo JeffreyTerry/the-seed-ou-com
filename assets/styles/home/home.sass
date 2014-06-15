@@ -1,61 +1,23 @@
 // wonderful blue (68, 133, 245)
 @import ../global
 
+
 .content-wrapper
-  width: $container-width
-  margin-left: auto
-  margin-right: auto
   .title
     cursor: default
     +unselectable()
-    font-size: 80px
+    font-size: 40px
     text-align: center
     font-family: comfortaa-bold
-  .title.first-title
-    color: #30FEAB
-  .title.second-title
-    color: #FF6E30
-  .title.third-title
-    color: #FFB630
-  .title.fourth-title
-    color: rgb(68, 133, 245)
-  .subtitle
-    cursor: default
-    +unselectable()
-    font-size: 36px
-    text-align: left
-    font-family: opensans-light
-    color: gray
   .text-content
     font-size: 16px
     font-family: opensans
-
-.content
-  width: 100%
-  padding: 20px 0
-
-@media (max-width: $container-width)
-  .content
-    width: $container-width
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .left-column
+    float: left
+    width: ($container-width - $column-padding) / 2
+  .right-column
+    float: right
+    width: ($container-width - $column-padding) / 2
 
 
 

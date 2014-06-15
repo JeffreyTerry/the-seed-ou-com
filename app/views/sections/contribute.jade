@@ -1,0 +1,45 @@
+extends ../layout
+
+block css
+  link(rel='stylesheet', href='/styles/sections/contribute.css')
+
+block content
+  .content-wrapper
+    .content
+      .left-column
+        .title Suggest Ideas
+        .text-content.
+          Here at the Seed, we go through a rigorous vetting process for each headline we post
+          online. As a result, only a few ideas make it to the front
+          page each week. By sending in many ideas, you increase the chances of one being
+          selected for publishing. You also help us improve the quality of our content
+          and fulfill our mission to communicate the truth* to
+          the beautiful students on this beautiful campus!
+        .input-box
+          input.share-input#share-headline-input(type='text', placeholder='your headline here')
+          button.share-button(onclick='sendHeadlineIdea()') share idea
+      .right-column
+        .title Apply
+        .text-content.
+          Headlines not enough for you? Apply to be a contributing editor here at the Seed, and
+          if selected, you will enjoy the full perks of working for the soon-to-be most
+          widely-read paper at OU. These include and are probably limited to: the ability to preview and
+          propose changes to upcoming articles; a voice in choosing which headlines to roll with
+          each week; and that good feeling that comes with keeping thousands of
+          college students informed about the issues that matter to them!
+        .input-box
+          a(href='application')
+            button.apply-button get application
+  //- Suggestion modal
+  .modal.fade#suggestion-modal(tabindex='-1', role='dialog', aria-labelledby='suggestion-modal-label', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          i.fa.fa-spinner.fa-spin#suggestion-spinner
+          span.modal-title#suggestion-modal-label &nbsp;&nbsp;Processing Suggestion
+
+block js
+  script(type='text/javascript', src='/js/sections/contribute.js')
+
+
+
