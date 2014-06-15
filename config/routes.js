@@ -1,14 +1,22 @@
-var _ = require('underscore');
+var _ = require('underscore'),
+    home = require('../app/controllers/home'),
+    proposals = require('../app/controllers/proposals'),
+    applications = require('../app/controllers/applications');
 
 // Stores a dictionary with route paths as keys and their corresponding static html files as values.
 var URLToFileMap = {
-  '/': 'home/home'
+  '/video': 'sections/video',
+  '/politics': 'sections/politics',
+  '/sports': 'sections/sports',
+  '/science': 'sections/science',
+  '/contribute': 'sections/contribute',
+  '/application': 'sections/application'
 };
 
 // Renders the proper web page for all static pages by parsing the route from the req object.
 var renderStaticPage = function(req, res){
   res.render(URLToFileMap[req.route.path], {
-      title: 'The Seed - Oklahoma\'s Grainiest News Network'
+      title: 'The Seed - Only the Truth*'
   });
 };
 
@@ -18,4 +26,9 @@ module.exports = function(app){
   _.each(URLToFileMap, function(value, key){
     app.get(key, renderStaticPage);
   });
+
+  app.get('/', home.index);
+  app.post('/headline/proposal', proposals.processProposal);
+  app.post('/application', applications.processApplication);
+
 };

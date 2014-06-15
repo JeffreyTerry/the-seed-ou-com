@@ -15,14 +15,16 @@ $navigation-item-padding: 18px
   margin-left: auto
   margin-right: auto
   position: relative
-  .logo-box
+  a.logo-box
+    display: block
+    text-decoration: none
     cursor: pointer
     font-size: 40px
     color: white
-    margin-left: auto
-    margin-right: auto
+    margin-left: 0px
     padding-top: 6px
     font-weight: bold
+    width: 200px
     .title
       margin: 0
       font-family: eagle
@@ -38,18 +40,21 @@ $navigation-item-padding: 18px
     position: absolute
     left: 200px
     top: $navigation-item-padding
-    .navigation-item
+    a.navigation-item
+      display: block
       height: $header-height - $navigation-item-padding * 2
       line-height: $header-height - $navigation-item-padding * 2
       float: left
       margin-left: 50px
       padding: 0 20px
-      font-size: 20px
-      font-family: sintony-bold
-      color: #FDF9D8
+      text-decoration: none
       cursor: pointer
       &:hover
         background-color: #660000
+      span
+        color: #FDF9D8
+        font-size: 20px
+        font-family: sintony-bold
 
 
 

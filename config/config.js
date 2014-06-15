@@ -3,6 +3,7 @@ var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
+
 // Configuration for different environments
 var config = {
   development: {

@@ -5,8 +5,13 @@ block css
 
 block content
   .content-wrapper
-    .content.
-      hey there
+    .content
+      .left-column
+        .title News
+        include ../content/news
+      .right-column
+        .title Latest
+        include ../content/latest
 
 block js
   script(type='text/javascript', src='/js/home/home.js')
