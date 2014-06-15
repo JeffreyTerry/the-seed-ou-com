@@ -1,7 +1,8 @@
 var _ = require('underscore'),
     home = require('../app/controllers/home'),
     proposals = require('../app/controllers/proposals'),
-    applications = require('../app/controllers/applications');
+    applications = require('../app/controllers/applications'),
+    uploader = require('../app/controllers/content/uploader');
 
 // Stores a dictionary with route paths as keys and their corresponding static html files as values.
 var URLToFileMap = {
@@ -10,7 +11,8 @@ var URLToFileMap = {
   '/sports': 'sections/sports',
   '/science': 'sections/science',
   '/contribute': 'sections/contribute',
-  '/application': 'sections/application'
+  '/application': 'sections/application',
+  '/uploader': 'content/uploader'
 };
 
 // Renders the proper web page for all static pages by parsing the route from the req object.
@@ -31,4 +33,8 @@ module.exports = function(app){
   app.post('/headline/proposal', proposals.processProposal);
   app.post('/application', applications.processApplication);
 
+  // Uploading
+  app.post('/upload/image', uploader.uploadImage);
+  app.post('/upload/article', uploader.uploadArticle);
+  app.post('/upload/headline', uploader.uploadHeadline);
 };

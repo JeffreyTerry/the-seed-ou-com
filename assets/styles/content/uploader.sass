@@ -29,6 +29,8 @@ $side-margins: 100px
 
 .input-box
   margin: 30px 0
+  display: block
+  min-height: 51px
 
 .input-box-description
   font-size: 24px
@@ -36,20 +38,38 @@ $side-margins: 100px
   line-height: 51px
   margin: 30px 0
 
-.application-input
+.article-input
   @extend .seed-input
   width: 100%
   +placeholder-text-color(#841617)
 
-.application-button
+.article-button
   @extend .seed-button
-  width: 100%
+  width: 45%
+  float: left
 
-#application-modal
+.headline-button
+  @extend .seed-button
+  width: 45%
+  float: right
+
+#article-modal
   margin-top: 200px
   font-size: 36px
   text-align: center
   color: #254467
+
+.image-input-wrapper
+  height: 0px
+  width: 0px
+  overflow: hidden
+
+.image-button
+  @extend .seed-button
+  cursor: pointer
+  text-align: center
+  width: 100%
+
 
 
 

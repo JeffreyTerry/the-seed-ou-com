@@ -3,8 +3,6 @@ var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
-
-
 // Configuration for different environments
 var config = {
   development: {
@@ -13,7 +11,7 @@ var config = {
       name: 'TheSeed'
     },
     port: 3000,
-    db: 'mongodb://localhost/EduCode-development'
+    db: 'mongodb://localhost/TheSeed-development'
   },
 
   test: {
@@ -22,7 +20,7 @@ var config = {
       name: 'TheSeed'
     },
     port: 3000,
-    db: 'mongodb://localhost/EduCode-test'
+    db: 'mongodb://localhost/TheSeed-test'
   },
 
   production: {

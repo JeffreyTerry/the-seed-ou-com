@@ -1,0 +1,42 @@
+extends ../layout
+
+block meta 
+  meta(name='csrf-token', content=csrfToken)
+
+block css
+  link(rel='stylesheet', href='/styles/content/uploader.css')
+
+block content
+  .content-wrapper
+    .content
+      .title Upload Articles
+      .left-column
+        .input-box-description Image
+        .input-box-description Headline
+        .input-box-description Article (Separate Paragraphs with &br&)
+      .right-column
+        .input-box(action='/upload/image', method='post', enctype='multipart/form-data')
+          .image-button(onclick='getFile()') choose image file
+          .image-input-wrapper
+            input#image-input(type='file', name='displayImage', onchange='substituteFileName()')
+        .input-box
+          input.article-input#headline-input(type='text', placeholder='headline')
+        .input-box
+          textarea.article-input#article-input(placeholder='article', rows=20)
+        .input-box
+          button.article-button(onclick='uploadArticle()') upload as article
+          button.headline-button(onclick='uploadHeadline()') upload as headline
+
+  //- Content modal
+  .modal.fade#article-modal(tabindex='-1', role='dialog', aria-labelledby='article-modal-label', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-body
+          i.fa.fa-spinner.fa-spin#article-spinner
+          span.modal-title#article-modal-label &nbsp;&nbsp;Processing Content
+
+block js
+  script(type='text/javascript', src='/js/content/uploader.js')
+
+
+

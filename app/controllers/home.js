@@ -1,18 +1,18 @@
-var news = require('./content/news'),
-    latest = require('./content/latest');
+var article = require('./content/article'),
+    headline = require('./content/headline');
 
 exports.index = function(req, res){
-  news.getAll(function(err, newsArticles){
+  article.getAll(function(err, articles){
     if(err){
-      console.log('Error loading news: ', err);
+      console.log('Error loading article: ', err);
     }else{
-      latest.getAll(function(err, latestStories){
+      headline.getAll(function(err, headlines){
         if(err){
-          console.log('Error loading news: ', err);
+          console.log('Error loading article: ', err);
         }else{
           res.render('home/home', {
-            newsArticles: newsArticles,
-            latestStories: latestStories
+            articles: articles,
+            headlines: headlines
           });
         }
       });

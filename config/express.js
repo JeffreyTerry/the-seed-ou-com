@@ -1,4 +1,5 @@
-var express = require('express');
+var express = require('express'),
+    busboy = require('connect-busboy');
 
 // Configuration for express server
 module.exports = function(app, config) {
@@ -10,6 +11,7 @@ module.exports = function(app, config) {
     //Using jade templating
     app.set('view engine', 'jade'); 
     // app.use(express.favicon(config.root + '/public/imgs/jefficon.png'));
+    app.use(busboy());
     app.use(express.logger('dev'));
     app.use(express.urlencoded());
     app.use(express.json());
