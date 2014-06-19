@@ -3,6 +3,22 @@ var fs = require('fs'),
     article = require('./article'),
     bcrypt = require('bcrypt');
 
+function authenticateRequest(req, options){
+  bcrypt.compare(req.body.pass, process.env.SEED_UPLOAD_PASS_HASH, function(err, response){
+    console.log(process.env.SEED_UPLOAD_PASS_HASH);
+    console.log(err);
+    if(err){
+      if(options && options.error){
+        options.error();
+      }
+    }else{
+      if(options && options.success){
+        options.success();
+      }
+    }
+  });
+}
+
 exports.uploadImage = function(req, res){
   req.pipe(req.busboy);
   req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype){
