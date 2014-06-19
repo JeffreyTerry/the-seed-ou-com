@@ -69,6 +69,7 @@ function uploadArticle(){
   var image = getImageFilename();
   var headline = $('#headline-input').val();
   var article = $('#article-input').val();
+  var authentication = $('#authentication-input').val();
 
   // Validation
   if(!image && !confirm('Are you sure you want to submit this article without an image?')){
@@ -82,6 +83,10 @@ function uploadArticle(){
     alert('Please enter article content');
     return;
   }
+  if(!authentication){
+    alert('Please enter authentication details');
+    return;
+  }
 
   showProcessingModal();  // Give the user the current status of the post
 
@@ -89,7 +94,7 @@ function uploadArticle(){
   if(image){
     uploadImageFile();
   }
-  $.post('/upload/article', {image: image, headline: headline, article: article, date: new Date()}, function(data){
+  $.post('/upload/article', {pass: authentication, image: image, headline: headline, article: article, date: new Date()}, function(data){
     if(!data.err){
       if(numberOfSuccessfulPosts > 0){
         displaySuccess();
@@ -106,6 +111,7 @@ function uploadHeadline(){
   var image = getImageFilename();
   var headline = $('#headline-input').val();
   var article = $('#article-input').val();
+  var authentication = $('#authentication-input').val();
 
   // Validation
   if(!image && !confirm('Are you sure you want to submit this headline without an image?')){
@@ -119,6 +125,10 @@ function uploadHeadline(){
     alert('You are not sending this in as an article. Please clear the article field.');
     return;
   }
+  if(!authentication){
+    alert('Please enter authentication details');
+    return;
+  }
 
   showProcessingModal();  // Give the user the current status of the post
 
@@ -126,7 +136,7 @@ function uploadHeadline(){
   if(image){
     uploadImageFile();
   }
-  $.post('/upload/headline', {image: image, headline: headline, article: article, date: new Date()}, function(data){
+  $.post('/upload/headline', {pass: authentication, image: image, headline: headline, article: article, date: new Date()}, function(data){
     if(!data.err){
       if(numberOfSuccessfulPosts > 0){
         displaySuccess();

@@ -13,7 +13,9 @@ block content
       .left-column
         .input-box-description Image
         .input-box-description Headline
-        .input-box-description Article (Separate Paragraphs with &br&)
+        .input-box-description Article
+          br
+          span.sub-description Separate paragraphs with &br&
       .right-column
         .input-box(action='/upload/image', method='post', enctype='multipart/form-data')
           .image-button(onclick='getFile()') choose image file
@@ -23,6 +25,8 @@ block content
           input.article-input#headline-input(type='text', placeholder='headline')
         .input-box
           textarea.article-input#article-input(placeholder='article', rows=20)
+        .input-box
+          input.article-input#authentication-input(type='password', placeholder='authentication')
         .input-box
           button.article-button(onclick='uploadArticle()') upload as article
           button.headline-button(onclick='uploadHeadline()') upload as headline
