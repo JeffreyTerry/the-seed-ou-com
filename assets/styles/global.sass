@@ -1,6 +1,8 @@
 // global variable
 $container-width: 1020px
 $primary-text-color: #000
+$background-color: rgb(245, 255, 250)
+$column-padding: 40px
 
 // functions
 =border-radius($radius)
@@ -43,15 +45,13 @@ $primary-text-color: #000
 
 body
   margin: 0
-  background-color: rgb(245, 255, 250)
+  background-color: $background-color
 
 .cursor-default
   cursor: default
 
 .unselectable
   +unselectable()
-
-$column-padding: 60px
 
 .content-wrapper
   width: $container-width

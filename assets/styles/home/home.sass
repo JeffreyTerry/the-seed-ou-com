@@ -1,5 +1,11 @@
-// wonderful blue (68, 133, 245)
 @import ../global
+
+$article-column-width: ($container-width - $column-padding) * 3 / 5
+$headline-column-width: ($container-width - $column-padding) * 2 / 5
+
+// wonderful blue (68, 133, 245)
+@import ./articlepreviews
+@import ./headlinepreviews
 
 .content-wrapper
   .title
@@ -13,10 +19,10 @@
     font-family: opensans
   .left-column
     float: left
-    width: ($container-width - $column-padding) * 3 / 5
+    width: $article-column-width
   .right-column
     float: right
-    width: ($container-width - $column-padding) * 2 / 5
+    width: $headline-column-width
 
 
 

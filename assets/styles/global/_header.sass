@@ -1,56 +1,95 @@
-$header-height: 80px
-$navigation-item-padding: 18px
+$logo-title-height: 67px
+$logo-title-padding: 18px
+$logo-image-height: 77px
+$logo-image-width: $logo-image-height
+$header-height: $logo-title-height + 60px
+$navigation-height: 53px
+$navigation-item-padding: 0px
+$navigation-box-width: 817px
+$logo-title-color: #971D20
 
-.header-wrapper
+// He's a (w)rapper
+.ice-cube
   width: 100%
-  height: $header-height
-  background-color: #841617
 
 @media (max-width: $container-width)
-  .header-wrapper
+  .ice-cube
     width: $container-width
 
-.header-box
+// He's a box(er)
+.mike-tyson
   width: $container-width
   margin-left: auto
   margin-right: auto
   position: relative
+
+.header-wrapper
+  @extend .ice-cube
+  height: $header-height
+  background-color: $background-color
+
+.header-box
+  @extend .mike-tyson
+  padding-top: ($header-height - $logo-image-height) / 2
   a.logo-box
     display: block
     text-decoration: none
     cursor: pointer
     font-size: 40px
     color: white
-    margin-left: 0px
-    padding-top: 6px
     font-weight: bold
-    width: 200px
-    .title
-      margin: 0
-      font-family: eagle
-      .cream-text
-        color: #FDF9D8
-      .crimson-text
-        color: #FDF9D8
-    .sub-title
-      font-family: disco
-      font-size: 20px
-      color: #FDF9D8
-  .navigation-box
-    position: absolute
-    left: 200px
-    top: $navigation-item-padding
+    width: $logo-image-width + $logo-title-padding + 188px
+    height: $logo-image-height
+    margin: 0px auto
+    .logo-image
+      display: block
+      float: left
+    .title-container
+      display: block
+      float: left
+      margin-left: $logo-title-padding
+      .title
+        clear: both
+        padding-top: ($logo-image-height - $logo-title-height) / 2
+        padding-bottom: ($logo-image-height - $logo-title-height) / 2
+        margin: 0
+        font-family: eagle
+        .cream-text
+          color: $logo-title-color
+        .crimson-text
+          color: $logo-title-color
+      .sub-title
+        clear: both
+        font-family: disco
+        font-size: 20px
+        color: $logo-title-color
+
+.navigation-wrapper
+  @extend .ice-cube
+  height: $navigation-height
+
+.navigation-box
+  @extend .mike-tyson
+  height: $navigation-height
+  background-color: rgba(102, 0, 0, 1.0)
+  // background-color: #841617
+  .link-container
+    margin-left: auto
+    margin-right: auto
+    width: $navigation-box-width
     a.navigation-item
       display: block
-      height: $header-height - $navigation-item-padding * 2
-      line-height: $header-height - $navigation-item-padding * 2
+      height: $navigation-height - $navigation-item-padding * 2
+      line-height: $navigation-height - $navigation-item-padding * 2
       float: left
-      margin-left: 50px
-      padding: 0 20px
+      margin: 0 45px
+      // padding: 0 20px
       text-decoration: none
       cursor: pointer
       &:hover
-        background-color: #660000
+        text-decoration: underline
+        color: #FDF9D8
+        // background-color: #660000
       span
         color: #FDF9D8
         font-size: 20px

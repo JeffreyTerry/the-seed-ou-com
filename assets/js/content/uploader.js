@@ -89,6 +89,7 @@ function uploadArticle(){
   }
 
   showProcessingModal();  // Give the user the current status of the post
+  numberOfSuccessfulPosts = 0;
 
   // Upload the stuff
   if(image){
@@ -131,6 +132,7 @@ function uploadHeadline(){
   }
 
   showProcessingModal();  // Give the user the current status of the post
+  numberOfSuccessfulPosts = 0;
 
   // Upload the stuff
   if(image){

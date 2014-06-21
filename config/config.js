@@ -3,7 +3,7 @@ var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
-process.env.SEED_UPLOAD_PASS_HASH = '$2a$10$xBdei8EteFJTGBBMq3bn6.YhvY9iSVFVlPdsDRlCUqVLNksuhwvz2'
+process.env.SEED_UPLOAD_PASS_HASH = '$2a$10$vMZfPz4snkwusK6wQ9c21eYHCrIxrCxO7Yf/EW.f1eztm5MeHLC.O';
 
 // Configuration for different environments
 var config = {

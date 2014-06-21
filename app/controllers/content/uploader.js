@@ -5,9 +5,7 @@ var fs = require('fs'),
 
 function authenticateRequest(req, options){
   bcrypt.compare(req.body.pass, process.env.SEED_UPLOAD_PASS_HASH, function(err, response){
-    console.log(process.env.SEED_UPLOAD_PASS_HASH);
-    console.log(err);
-    if(err){
+    if(!response){
       if(options && options.error){
         options.error();
       }
