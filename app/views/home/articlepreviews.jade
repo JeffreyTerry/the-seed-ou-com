@@ -1,0 +1,7 @@
+each article in articles
+  .article-box
+    .article-image
+      img(src='imgs/content/' + article.image, width=500, height=300)
+    h2.article-title= article.headline
+    p= article.paragraphs[0] + '...'
+

@@ -10,7 +10,6 @@ module.exports = function(app, config) {
     app.set('views', config.root + '/app/views');
     //Using jade templating
     app.set('view engine', 'jade'); 
-    // app.use(express.favicon(config.root + '/public/imgs/jefficon.png'));
     app.use(busboy());
     app.use(express.logger('dev'));
     app.use(express.urlencoded());
